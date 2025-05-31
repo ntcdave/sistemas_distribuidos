@@ -1,0 +1,45 @@
+Atividade 01: Computação Paralela com Processos
+
+Objetivo: Utilizar múltiplos processos para realizar uma tarefa pesada em paralelo.
+
+Especificação: Utilizar múltiplos processos para realizar o cálculo de números primos.
+
+Descrição: Dividir um intervalo de números entre diferentes processos. Cada processo deve calcular os números primos na sua faixa. Ao final, juntar os resultados.
+
+===================================================================================
+
+Atividade 02: Comparação de Threads e Processos
+
+Objetivo: Medir o desempenho entre o uso de threads e processos em tarefas paralelas.
+
+Descrição: Use uma tarefa CPU-bound (como fatorial grande). Execute com threads e depois com processos. Após isso, compare tempo de execução e uso de CPU.
+
+===================================================================================
+
+Atividade 03: Chat P2P com Threads
+
+Objetivo: Implementar um chat ponto a ponto (P2P) onde cada usuário pode enviar e receber mensagens simultaneamente.
+
+Descrição: Crie um cliente que se conecta a outro cliente via socket. Após. use duas threads: uma para enviar mensagens, outra para receber. Permita que a conversa aconteça de forma simultânea (full-duplex). Pode ser feito localmente (localhost) ou via rede. Utilizar os seguinte recursos: socket, threading (em Python) e Interface de texto (terminal) ou opcionalmente com tkinter.
+
+===================================================================================
+
+Atividade 04: Cálculo Distribuído de Pi com Processos
+
+Objetivo: Utilizar processos paralelos para calcular uma aproximação de π (pi) usando a série de Leibniz ou Monte Carlo.
+
+Descrição: O cálculo de pi pode ser feito por aproximações que exigem muitos cálculos repetitivos. Dessa formam, divida o trabalho entre vários processos, cada um responsável por calcular uma parte da série. O processo mestre junta os resultados parciais e exibe a aproximação final de π. 
+
+Etapas: O processo principal divide o intervalo de somas entre n processos. Cada processo calcula uma parte da série. Após isso, os resultados são enviados de volta ao processo principal via Queue ou Pipe. O processo principal soma e imprime o resultado final. Utilizar multiprocessing.
+
+===================================================================================
+
+Atividade 05: Simulação de Fila de Atendimento com Threads
+
+Objetivo: Simular um sistema de filas (como um banco, clínica ou supermercado) onde múltiplos atendentes (threads) atendem clientes concorrentes. 
+
+Descrição: Há uma fila de clientes que precisam ser atendidos. Vários atendentes (threads) pegam um cliente da fila e processam o atendimento (simulado com sleep()). A fila deve ser protegida para evitar condições de corrida (race conditions). Use mutex/lock para garantir que dois atendentes não peguem o mesmo cliente ao mesmo tempo.
+
+Requisitos: Representar a fila com uma estrutura segura (queue.Queue).  Usar múltiplas threads para simular atendentes concorrentes. Mostrar qual cliente está sendo atendido por qual thread, o tempo de espera na fila e o tempo de atendimento. Em caso de retorno de cliente e nova entrada na fila, encaminhar para o atendente que fez o primeiro atendimento.
+
+
